@@ -3,10 +3,15 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        body {
+            background-color: rgb(127, 150, 255);
+            margin: auto;
+            text-align: center;
+        }
+
         .box {
             width: 200px;
             height: 50px;
@@ -32,57 +37,6 @@
         .box:hover {
             -webkit-transform: scale(1.1);
             transform: scale(1.1);
-        }
-
-        img {
-            object-fit: cover;
-        }
-
-        .wrapper02 {
-            width: 700px;
-            height: 200px;
-            margin: 20px auto;
-        }
-
-        .items {
-            width: 100%;
-            height: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 40px;
-        }
-
-        .i {
-            width: 300px;
-            height: 200px;
-            margin: auto;
-            font-size: 20px;
-        }
-
-        .i1 {
-            width: 300px;
-            height: 200px;
-            margin: auto;
-            padding-top: 150px;
-        }
-
-        .topimg {
-            max-width: 100%;
-        }
-
-        .item {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            object-fit: cover;
-        }
-
-        body {
-            background-color: rgb(127, 150, 255);
-            margin: auto;
-            text-align: center;
         }
 
         .breadcrumb {
@@ -131,27 +85,25 @@
         .breadcrumb li a:hover {
             color: #FFF;
         }
+        .maps{
+            padding: 50px;
+        }
+        h1 {
+            padding-top: 50px;
+            margin: auto;
+            font-size: 40px;
+            color: green;
+        }
     </style>
 </head>
 
 <body>
-    <div>
-        <img class="topimg" src="img/IMG_2129.webp" alt="">
-    </div>
-    <div class="wrapper02">
-        <div class="items">
-            <div class="i">
-                <img class="item" src="img/IMG_2132.webp" alt="">
-                <p>落とし物...</p>
-            </div>
-            <div class="i">
-                <img class="item" src="img/IMG_2116.webp" alt="">
-                <p>ライオン電気自動車</p>
-            </div>
-        </div>
+    <h1>'MAP'</h1>
+    <div class="maps">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3242.110660026062!2d139.4006605762505!3d35.64964513170764!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018e2583ad7889f%3A0x5e4ecc1e62a0284!2z5aSa5pGp5YuV54mp5YWs5ZyS!5e0!3m2!1sja!2sjp!4v1734710519346!5m2!1sja!2sjp" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
     <div class="box">
-        <a href="index4.html">MAPへ</a>
+        <a href="index.html">トップへ</a>
     </div>
     <ol class="breadcrumb" itemscope itemtype="https://fkmrd127.github.io/-/">
         <li itemprop="itemListElement" itemscope itemtype="https://fkmrd127.github.io/-/">
@@ -165,6 +117,10 @@
         <li itemprop="itemListElement" itemscope itemtype="https://fkmrd127.github.io/-/">
             <a itemprop="item" href="index3.html"><span itemprop="name">昆虫館</span></a>
             <meta itemprop="positeion" content="3" />
+        </li>
+        <li itemprop="itemListElement" itemscope itemtype="https://fkmrd127.github.io/-/">
+            <a itemprop="item" href="index4.html"><span itemprop="name">MAP</span></a>
+            <meta itemprop="positeion" content="4" />
         </li>
     </ol>
 </body>

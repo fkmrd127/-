@@ -1,11 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        body{
+            background-color: rgb(175, 158, 255);
+            margin: auto;
+            text-align: center;
+        }
+
+        img{
+            max-width: 100%;
+            object-fit: cover;
+        }
+
         .box {
             width: 200px;
             height: 50px;
@@ -15,16 +27,98 @@
             color: #fff;
             text-align: center;
             margin: auto;
+            font-size: 30px;
+        }
+        .box a {
+            display: inline-block;
+            color: #ee2d7b;
+            font-size: 120%;
+            text-decoration: none;
+            transition: .3s;
+            -webkit-transform: scale(1);
+            transform: scale(1);
+        }
+
+        .box:hover {
+            -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+        }
+
+        .breadcrumb {
+            margin: 0;
+            padding: 10px;
+            list-style: none;
+        }
+
+        .breadcrumb li {
+            position: relative;
+            display: inline-block;
+            /*横に並ぶように*/
+            list-style: none;
+            font-weight: bold;
+            /*太字*/
+            margin-right: 0.8em;
+        }
+
+        .breadcrumb li:after {
+            /*三角の部分*/
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 100%;
+            border-style: solid;
+            border-color: transparent;
+            border-left-color: #aedfc6;
+            /*背景色*/
+            border-width: 14px 12px;
+            width: 0;
+            height: 0;
+        }
+
+        .breadcrumb li a {
+            display: inline-block;
+            padding: 0 3px 0 7px;
+            height: 28px;
+            line-height: 28px;
+            text-decoration: none;
+            color: #747772;
+            background: #aedfc6;
+            /*背景色*/
+            font-size: 13px;
+        }
+
+        .breadcrumb li a:hover {
+            color: #FFF;
+        }
+        h1 {
+            margin: auto;
+            font-size: 40px;
+            color: green;
         }
     </style>
 </head>
-<body>
+
+<body> 
+    <h1>トキ</h1>
+    <div>
+        <img src="img/IMG_2120.webp" alt="">
+    </div>
+    <p>遠いところに居た</p>
     <div class="box">
         <a href="index3.html">つぎへ</a>
     </div>
-    <li itemprop="itemListElement" itemscope itemtype="https://fkmrd127.github.io/-/">
-        <a itemprop="item" href="index2.html"><span itemprop="name">トップ</span></a>
-        <meta itemprop="positeion" content="2" />
-    </li>
+    <ol class="breadcrumb" itemscope itemtype="https://fkmrd127.github.io/-/">
+        <li itemprop="itemListElement" itemscope itemtype="https://fkmrd127.github.io/-/">
+            <a itemprop="item" href="index.html"><span itemprop="name">トップ</span></a>
+            <meta itemprop="positeion" content="1" />
+        </li>
+        <li itemprop="itemListElement" itemscope itemtype="https://fkmrd127.github.io/-/">
+            <a itemprop="item" href="index2.html"><span itemprop="name">トキ</span></a>
+            <meta itemprop="positeion" content="2" />
+        </li>
+    </ol>
+   
+   
 </body>
+
 </html>

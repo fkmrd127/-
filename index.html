@@ -16,6 +16,21 @@
             color: #fff;
             text-align: center;
             margin: auto;
+            font-size: 30px;
+        }
+        .box a {
+            display: inline-block;
+            color: #ee2d7b;
+            font-size: 120%;
+            text-decoration: none;
+            transition: .3s;
+            -webkit-transform: scale(1);
+            transform: scale(1);
+        }
+
+        .box:hover {
+            -webkit-transform: scale(1.1);
+            transform: scale(1.1);
         }
 
         .items {
@@ -24,17 +39,18 @@
             grid-template-columns: 1fr;
             gap: 100px;
         }
-        .item{
+
+        .item {
             margin: auto;
-            width: 300px;
-            height: 300px;
+            width: 250px;
+            height: 250px;
             font-family: sans-serif;
             font-size: 30px;
             color: blue;
             font-weight: bold;
         }
 
-        .green{
+        .green {
             color: green;
         }
 
@@ -56,28 +72,81 @@
             font-size: 40px;
             color: green;
         }
+
+        .breadcrumb {
+            margin: 0;
+            padding: 10px;
+            list-style: none;
+        }
+
+        .breadcrumb li {
+            position: relative;
+            display: inline-block;
+            /*横に並ぶように*/
+            list-style: none;
+            font-weight: bold;
+            /*太字*/
+            margin-right: 0.8em;
+        }
+
+        .breadcrumb li:after {
+            /*三角の部分*/
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 100%;
+            border-style: solid;
+            border-color: transparent;
+            border-left-color: #aedfc6;
+            /*背景色*/
+            border-width: 14px 12px;
+            width: 0;
+            height: 0;
+        }
+
+        .breadcrumb li a {
+            display: inline-block;
+            padding: 0 3px 0 7px;
+            height: 28px;
+            line-height: 28px;
+            text-decoration: none;
+            color: #747772;
+            background: #aedfc6;
+            /*背景色*/
+            font-size: 13px;
+        }
+
+        .breadcrumb li a:hover {
+            color: #FFF;
+        }
     </style>
 </head>
 
 <body>
     <h1>多摩動物公園！</h1>
+
     <div class="items">
         <div class="item">
-            <img src="../1220/img/IMG_2111.webp" alt="">
+            <img src="img/IMG_2111.webp" alt="">
             <p>ユキヒョウ</p>
         </div>
         <div class="item">
-            <img src="../1220/img/IMG_2114.webp" alt="">
+            <img src="img/IMG_2114.webp" alt="">
             <p class="green">ヒマラヤタール</p>
         </div>
         <div class="box">
             <a href="index2.html">つぎへ</a>
         </div>
+
     </div>
-    <li itemprop="itemListElement" itemscope itemtype="https://fkmrd127.github.io/-/">
-        <a itemprop="item" href="index.html"><span itemprop="name">トップ</span></a>
-        <meta itemprop="positeion" content="1" />
-    </li>
+    <ol class="breadcrumb" itemscope itemtype="https://fkmrd127.github.io/-/">
+        <li itemprop="itemListElement" itemscope itemtype="https://fkmrd127.github.io/-/">
+            <a itemprop="item" href="index.html"><span itemprop="name">トップ</span></a>
+            <meta itemprop="positeion" content="1" />
+        </li>
+    </ol>
 </body>
+<footer>
+</footer>
 
 </html>
